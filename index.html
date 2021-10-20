@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <form action="">
+            <h2>Find the Area of Triangle</h2>
+            <input type="number" placeholder="First Length" id="L1" style="margin-bottom: 10px;"><br>
+            <input type="number" placeholder="Second Length" id="L2" style="margin-bottom: 10px;"><br>
+            <input type="number" placeholder="Third Length " id="L3" style="margin-bottom: 10px;"><br>
+            <button type="button" onclick="find();">Result</button>
+        </form>
+
+
+        <h2 id="result"></h2>
+
+
+
+        <script>
+            function find() {
+                let L1 = document.getElementById("L1").value;
+                let L2 = document.getElementById("L2").value;
+                let L3 = document.getElementById("L3").value;
+                let s = (parseInt(L1) + parseInt(L2) + parseInt(L3)) / 2;
+                let area = Math.sqrt(s * (s - L1) * (s - L2) * (s - L3));
+                let result = area.toFixed(4);
+                document.getElementById("result").innerHTML = ("Area of Triangle: " + (result));
+
+            }
+        </script>
+    </body>
+
+</html>
